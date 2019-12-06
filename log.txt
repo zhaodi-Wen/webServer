@@ -1,0 +1,1658 @@
+util.c(40)-<read_conf>: SUB: [0]
+util.c(40)-<read_conf>: SUB: [0]
+2000
+util.c(59)-<read_conf>: SUB: [0]
+util.c(40)-<read_conf>: SUB: [0]
+config port 2000
+config thread num 4
+listen fd3
+after  tk_epoll_add
+after  threadpool_init 
+time 1575535700075
+----------------------------
+in tk_find_timer
+tk_timer size 0
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535702261
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535702261
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535702261
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535702261
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535702261
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535702262
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 5
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535702262
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535702262
+after tk_pq_min 
+in if
+in tk_pq_delmin
+2 
+after exch
+time 1575535702262
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+5
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535702650
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535702650
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535702650
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535702651
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 6
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535702651
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535702651
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+6
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535702868
+in tk_pq_delmin
+2 
+after exch
+time 1575535702868
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535702868
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535702868
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535702869
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 5
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535702869
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535702869
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+5
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535744631
+in tk_pq_delmin
+2 
+after exch
+time 1575535744631
+in tk_pq_delmin
+1 
+after exch
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 6
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 0
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535744631
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535744631
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535744631
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535744631
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535744631
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535744631
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535744632
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 5
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535744632
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535744632
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+5
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535754228
+in tk_pq_delmin
+2 
+after exch
+time 1575535754228
+in tk_pq_delmin
+1 
+after exch
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535754228
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535754229
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535754229
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 6
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535754229
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535754229
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+6
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535754483
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535754483
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535754483
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535754483
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 5
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535754484
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535754484
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+5
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535754666
+in tk_pq_delmin
+2 
+after exch
+time 1575535754666
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 6
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535754666
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535754666
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+6
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535754669
+in tk_pq_delmin
+1 
+after exch
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535754669
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535754669
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535754864
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535754864
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535754864
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535754864
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 5
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535754864
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535754864
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+5
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535755059
+in tk_pq_delmin
+2 
+after exch
+time 1575535755059
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535755059
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535755059
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535755061
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 6
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535755061
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535755061
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+6
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535755248
+in tk_pq_delmin
+2 
+after exch
+time 1575535755248
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 5
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535755248
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535755248
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535755249
+in tk_pq_delmin
+1 
+after exch
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535755249
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535755249
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+5
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535755418
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535755418
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535755418
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535755418
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 6
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535755418
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535755418
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+6
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535755575
+in tk_pq_delmin
+2 
+after exch
+time 1575535755575
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535755575
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535755575
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535755575
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 5
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 2
+time 1575535755575
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535755575
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+5
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535770738
+in tk_pq_delmin
+2 
+after exch
+time 1575535770738
+in tk_pq_delmin
+1 
+after exch
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 6
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 0
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535770738
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535770738
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535770738
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535770738
+in tk_pq_delmin
+1 
+after exch
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535770738
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535770738
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535770739
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 5
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535770739
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535770739
+after tk_pq_min 
+in if
+in tk_pq_delmin
+1 
+after exch
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+5
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535771335
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535771335
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535771336
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 6
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535771336
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535771336
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+6
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>if you see this page ,it means that the webserver is running successfully</h1>
+        <p>You can click here to h isit my blog</p>
+        <a href="https://www.zdwlove.com/">CLick</a>
+        <p><em>Thank you for visiting it</em></p>
+    </body>
+</html> 
+rio.c(48)-<rio_writen>: SUB: []
+n 626
+http.c(278)-<do_request>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535771547
+in tk_pq_delmin
+1 
+after exch
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 3
+listen fd 3 
+time 1575535771547
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535771547
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+ret count 1 
+after  tk_epoll_wait 
+event num 1 
+time 1575535771548
+main.c(62)-<main>: SUB: [0]
+after  tk_handle_expire_timers 
+fd 5
+listen fd 3 
+epoll.c(80)-<tk_handle_events>: SUB: [0]
+threadpool.c(193)-<threadpool_add>: SUB: [0]
+threadpool.c(196)-<threadpool_add>: SUB: [0]
+after  tk_handle_events 
+----------------------------
+in tk_find_timer
+tk_timer size 1
+time 1575535771548
+after tk_pq_min 
+after if
+after  tk_find_timer 
+in epoll wait
+epoll.c(53)-<tk_epoll_wait>: SUB: [0]
+http.c(198)-<do_request>: SUB: [0]
+time 1575535771548
+http.c(230)-<do_request>: SUB: [0]
+http.c(235)-<do_request>: SUB: [0]
+http.c(239)-<do_request>: SUB: [510]  
+http.c(247)-<do_request>: SUB: [0]
+http.c(251)-<do_request>: SUB: [0]
+http.c(264)-<do_request>: SUB: [0]
+http_request.c(107)-<tk_http_handle_header>: SUB: [0]
+http_request.c(119)-<tk_http_handle_header>: SUB: [0]
+http.c(270)-<do_request>: SUB: [0]
+http.c(149)-<serve_static>: SUB: [HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+]
+5
+buf HTTP/1.1 200 OK 
+Connection: keep-alive
+Keep-Alive: timeout=500
+Content-type : text/html
+Content-length:626
+Last-Modified:Thu, 05 Dec 2019 16:45:20 GMT
+Server: Server
+
+ 
+rio.c(48)-<rio_writen>: SUB: []
+n 176
+http.c(153)-<serve_static>: SUB: [176]
+http.c(154)-<serve_static>: SUB: [176]
+http.c(161)-<serve_static>: SUB: [0]
+http.c(165)-<serve_static>: SUB: [0]
+buf <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>this is my web server</title>
+        <style>
+            body{
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana,Arial,sans-serif;
+   
