@@ -1,4 +1,4 @@
-#epoll源码的分析
+## epoll源码的分析
 ### 1、linux提供了3个关键函数来操作epoll，分别是</br>
 
 - ①epoll_create(),创建一个eventpoll对象，我的理解就是创建一个监听的句柄(联想到select函数的一个参数是fd的最大数目+1)
@@ -7,8 +7,8 @@
 而操作系统内部还有一个epoll_event_callback()的回调函数来调度epoll中的事件
 
 
-### 源码分析
-#### 核心数据结构
+
+### 2、 核心数据结构
 - ①epitem 如图<br/>
  &emsp;&emsp;&emsp;&emsp;![结构图](https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdnimg.cn/20190716141454917.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlcGx1c18=,size_16,color_FFFFFF,t_70)<br/>
 eptiem主要包括两个成员变量,rbn和rdlink,前者是红黑树的节点，否则是双向链表的节点，也就是一个epitem对象既可以是红黑树的一个节点又可以是双向链表的一个节点，每个epitem中有一个event，对于event事件的查询就是对epitem的查询
@@ -68,7 +68,7 @@ struct eventpoll {
 	
 };
 ```
-#### 关键函数
+### 3、 关键函数
 - (1)epoll_create()
 ```c++
 
@@ -351,7 +351,7 @@ int epoll_event_callback(struct eventpoll *ep, int sockid, uint32_t event) {
 ```
 也就是将eventpoll指向的红黑树的节点插入双向链表中
 
-#### 结论
+### 4、 结论
 epoll底层两个关键的数据结构,一个是eventpoll一个是epitem,其中evetnpoll两个变量rbr和rdlist。而epitem则是红黑树节点和双向链表节点的综合体，也就是说epitem的部分结构属于eventpoll里面，就是rbr和rdlist,但是epitem里面注册着用户的事件
 
 - 用户调用epoll_create()时，创建一个eventpoll对象(包括红黑树和双向链表)
